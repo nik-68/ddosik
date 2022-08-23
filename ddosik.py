@@ -34,7 +34,7 @@ url_chek = requests.get(url)
 ip = socket.gethostbyname(url.replace("https://","").replace("http://",""))
 print(ip)
 print()
-ip = raw_input("\033[94m IP Target \033[1;31;40m  ==> : \033[0m")
+ip = input("\033[94m IP Target \033[1;31;40m  ==> : \033[0m")
 port = input(" \033[94m Port Target \033[1;31;40m ==> : \033[0m")
 
 os.system("clear")
