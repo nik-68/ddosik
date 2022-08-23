@@ -72,7 +72,7 @@ if port == 00000:
           sock.sendto(bytes, (ip,port))
           sent = sent + 1
           port = port + 1
-          print ("sent %s packet %s port %d"%(sent,ip,port))
+          print ("Has sent %s packet %s port %d"%(sent,ip,port))
           time.sleep((1000-speed)/2000)
           if port == 65535:
                port = 1
@@ -80,5 +80,5 @@ else:
      while True:
           sock.sendto(bytes, (ip,port))
           sent = sent + 1
-          print ("sent %s packet %s port %d"%(sent,ip,port))
+          print ("Has sent %s packet %s port %d"%(sent,ip,port))
           time.sleep((1000-speed)/2000)
