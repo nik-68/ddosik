@@ -73,7 +73,7 @@ if port == "all":
      while True:
           sock.sendto(bytes, (ip,port))
           port = port + 1
-          print ("Has sent %s packet %s port %d"%(sent,ip,port))
+          print ("\033[93mSent %s packet %s port %d\033[94m"%(sent,ip,port))
           time.sleep((1000-speed)/2000)
           if port == 65535:
                port = 1
