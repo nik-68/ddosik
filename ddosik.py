@@ -3,6 +3,8 @@ import os
 import time
 import socket
 import random
+import requests
+import os, sys, codecs
 #Code Time
 from datetime import datetime
 now = datetime.now()
@@ -28,7 +30,7 @@ print("""\033[94m
 """)
 #ip
 url = input("\033[94m╔═══\033[91m[ Url ] •\n\033[94m╠══>\033[0m ")
-url_chek =requests.get(url)
+url_chek = requests.get(url)
 ip = socket.gethostbyname(url.replace("https://","").replace("http://",""))
 print(ip)
 print()
