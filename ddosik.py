@@ -83,5 +83,5 @@ else:
      while True:
           sock.sendto(bytes, (ip,port))
           sent = sent + 1
-          print ("Has sent %s packet %s port %d"%(sent,ip,port))
+          print ("\033[93mSent %s packet %s port %d\033[94m"%(sent,ip,port))
           time.sleep((1000-speed)/2000)
